@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-
+import "./Header.css"
 export default function Header(){
     return (
       <>
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top w-100">
+<nav id="header" className="navbar navbar-expand-lg navbar-dark bg-dark static-top w-100">
   <div className="container">
     <a className="navbar-brand" href="#">
       <Link to={"/"}><h1>Cinema</h1></Link>

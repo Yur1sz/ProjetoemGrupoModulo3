@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ListItems from "../../components/ListItems";
 import Section from "../../components/Section";
-import "./Home.module.css"
-
+import "./Home.css"
+import EmCartazIMG from '../../images/cinema.png'
+import setaDireita from '../../images/setaDireita.png'
 export default function Home() {
   const [filmes, setFilmes] = useState([]);
 
@@ -26,8 +27,9 @@ export default function Home() {
 
   return (
     <>
-      <div>
-        <h2 className="CartazH2">Filmes em cartaz</h2>
+      <div id="Cartaz">
+        <img src={EmCartazIMG}/>
+        <h2 id="CartazH2">Filmes em cartaz</h2>
       </div>
       <Section>
         {filmes.length === 0 ? (
@@ -37,6 +39,7 @@ export default function Home() {
             <ListItems nomeFilme={item.titulo} img={item.imagem} />
           ))
         )}
+        <span id="setaDireita"><img src={setaDireita} alt="" /></span>
       </Section>
     </>
   );
