@@ -29,6 +29,6 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider basename={process.env.PUBLIC_URL} router={router}/>
   </React.StrictMode>
 )
