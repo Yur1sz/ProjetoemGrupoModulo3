@@ -1,0 +1,14 @@
+ul{
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    list-style: none;
+}
+p{
+    text-align: center;
+    font-size: 2rem;
+}
+img{
+    width: 300px;
+    height: 450px;
+}

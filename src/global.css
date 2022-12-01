@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-color: rgb(68, 68, 68);
+}
+.CartazH2{
+    font-size: 3.5rem;
+}
