@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import { createBrowserRouter, RouterProvider, Route} from "react-router-dom"
 
-import Home from './routes/Home';
-import { Filmes } from './routes/Filmes';
+import Home from './routes/Home/Home';
+import  Cinemas  from './routes/Cinemas/Cinemas';
+import Precos from './routes/Precos/Precos';
 
 
 const router = createBrowserRouter([
@@ -16,9 +17,13 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/filmes",
-        element: <Filmes />,
+        path: "/cinemas",
+        element: <Cinemas/>
       },
+      {
+        path: "/precos",
+        element: <Precos />
+      }
     ],
   },
 ])
