@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, Route} from "react-router-dom"
 import Home from './routes/Home/Home';
 import  Cinemas  from './routes/Cinemas/Cinemas';
 import Precos from './routes/Precos/Precos';
+import NewPost from './routes/NewPost/NewPost';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/precos",
         element: <Precos />
+      },
+      {
+        path: "/novo-filme",
+        element: <NewPost />
       }
     ],
   },

@@ -4,3 +4,7 @@
 #header ul{
     overflow: hidden;
 }
+#logo a {
+    text-decoration: none;
+    color: white;
+}

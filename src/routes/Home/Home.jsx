@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import fetch from "../../axios/config";
 import ListItems from "../../components/ListItems";
 import Section from "../../components/Section";
 import "./Home.css"
 import EmCartazIMG from '../../images/cinema.png'
-import setaDireita from '../../images/setaDireita.png'
+import LoadingGIF from '../../images/gif-loading.gif'
+
+
 export default function Home() {
+
   const [filmes, setFilmes] = useState([]);
 
   const getFilmes = async () => {
     try {
-      const response = await axios.get(
-        "https://json-server-m3-8rj7.onrender.com/filmes"
-      );
+      const response = await fetch.get("/filmes");
       const data = response.data;
 
       setFilmes(data);
@@ -32,14 +33,15 @@ export default function Home() {
         <h2 id="CartazH2">Filmes em cartaz</h2>
       </div>
       <Section>
+        
+
         {filmes.length === 0 ? (
-          <p>Carregando...</p>
+          <img src={LoadingGIF} id="LoadingGIF" alt="" />
         ) : (
           filmes.map((item) => (
             <ListItems nomeFilme={item.titulo} img={item.imagem} />
           ))
         )}
-        <span id="setaDireita"><img src={setaDireita} alt="" /></span>
       </Section>
     </>
   );

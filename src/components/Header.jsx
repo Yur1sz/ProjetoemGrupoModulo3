@@ -5,7 +5,7 @@ export default function Header(){
       <>
 <nav id="header" className="navbar navbar-expand-lg navbar-dark bg-dark static-top w-100">
   <div className="container">
-    <a className="navbar-brand" href="#">
+    <a id="logo" className="navbar-brand" href="#">
       <Link to={"/"}><h1>Cinema</h1></Link>
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +21,9 @@ export default function Header(){
         </li>
         <li className="fs-5 nav-item">
           <Link className="nav-link" to={"precos"}>Preços</Link>
+        </li>
+        <li className="fs-5 nav-item">
+          <Link className="nav-link" to={"novo-filme"}>Adicionar Filme</Link>
         </li>
       </ul>
     </div>
