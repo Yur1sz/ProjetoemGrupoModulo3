@@ -1,5 +1,5 @@
 .newPost {
-    margin-top: 60px;
+    margin-block: 60px;
     padding: 30px;
     width: 100%;
     border-block: 2px solid var(--vermelhoClaro);
