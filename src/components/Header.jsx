@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Header.css"
+import LogoMarca from "../images/reactflix.png"
 export default function Header(){
     return (
       <>
 <nav id="header" className="navbar navbar-expand-lg navbar-dark bg-dark static-top w-100">
   <div className="container">
-    <a id="logo" className="navbar-brand" href="#">
-      <Link to={"/"}><h1>Cinema</h1></Link>
-    </a>
+    <div id="imagemLogo">
+      <Link to={"/"}><img src={LogoMarca} alt="" /></Link>
+    </div>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

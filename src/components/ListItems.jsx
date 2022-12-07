@@ -1,10 +1,11 @@
-export default function ListItems({img, nomeFilme}) {
+export default function ListItems({img, nomeFilme, anoFilme}) {
 
     return(
         <>
-            <li>
+            <li id="liHome">
                 <img src={img} alt="" />
-                <p>{nomeFilme}</p>
+                <p>{nomeFilme} ({anoFilme})</p>
+                <button>Mais informações</button>
             </li>
         </>
     )

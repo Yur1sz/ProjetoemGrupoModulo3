@@ -30,16 +30,14 @@ export default function Home() {
     <>
       <div id="Cartaz">
         <img src={EmCartazIMG}/>
-        <h2 id="CartazH2">Filmes em cartaz</h2>
+        <h2>em cartaz</h2>
       </div>
       <Section>
-        
-
         {filmes.length === 0 ? (
           <img src={LoadingGIF} id="LoadingGIF" alt="" />
         ) : (
           filmes.map((item) => (
-            <ListItems nomeFilme={item.titulo} img={item.imagem} />
+            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} />
           ))
         )}
       </Section>

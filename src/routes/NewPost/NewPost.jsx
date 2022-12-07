@@ -21,8 +21,9 @@ export default function NewPost() {
             titulo: titulo,
             imagem: imagem,
             roteiro: roteiro,
-            ano: ano
+            ano: ano,
         })
+
     }
 
     return(
@@ -31,19 +32,19 @@ export default function NewPost() {
             <form onSubmit={(e)=>createPost(e)}>
                 <div className={styles.formControl}>
                     <label htmlFor="titulo">Título do filme:</label>
-                    <input type="text" name="titulo" placeholder="Digite o título" className={styles.tituloInput} id="titulo" onChange={(e) => setTitle(e.target.value)}/>
+                    <input type="text" name="titulo" required placeholder="Digite o título" className={styles.tituloInput} id="titulo" onChange={(e) => setTitle(e.target.value)}/>
                 </div>
                 <div className={styles.formControl}>
                     <label htmlFor="ano">Data de lançamento:</label>
-                    <input type="number" min={1900} max={2022} maxLength={4} minLength={4} name="ano" placeholder="Ex.: 1980" className={styles.anoInput} id="ano" onChange={(e) => setAno(e.target.value)}/>
+                    <input type="number" required min={1900} max={2022} maxLength={4} minLength={4} name="ano" placeholder="Ex.: 1980" className={styles.anoInput} id="ano" onChange={(e) => setAno(e.target.value)}/>
                 </div>
                 <div className={styles.formControl}>
                     <label htmlFor="roteiro">Roteiro:</label>
-                    <input type="text" name="roteiro" placeholder="Digite roteirista" className={styles.roteiroInput} id="roteiro" onChange={(e) => setRoteiro(e.target.value)}/>
+                    <input type="text" required name="roteiro" placeholder="Digite roteirista" className={styles.roteiroInput} id="roteiro" onChange={(e) => setRoteiro(e.target.value)}/>
                 </div>
                 <div className={styles.formControl}>
                     <label htmlFor="imagem">Imagem:</label>
-                    <input type="text" name="imagem" placeholder="Selecione a imagem" id="imagem" className={styles.imagemInput} onChange={(e) => setImagem(e.target.value)}/>
+                    <input type="text" required name="imagem" placeholder="Insira a URL da imagem" id="imagem" className={styles.imagemInput} onChange={(e) => setImagem(e.target.value)}/>
                 </div>
                 <input type="submit" className={styles.btn} value="Cadastrar filme" />
             </form>
