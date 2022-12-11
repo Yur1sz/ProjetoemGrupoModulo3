@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.css"
-import LogoMarca from "../images/reactflix.png"
+import LogoMarca from "../images/REACTFLIX-linear.png"
 export default function Header(){
     return (
       <>
