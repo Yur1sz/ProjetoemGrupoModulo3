@@ -1,7 +1,7 @@
 import instagram from "../images/instagram.png"
 import facebook from "../images/facebook.png"
 import twitter from "../images/twitter.png"
-import reactflix from "../images/reactflix3.png"
+import reactflix from "../images/reactflix4.png"
 import googleplus from "../images/google-plus.png" 
 import "./Footer.css"
 export default function Footer () {
