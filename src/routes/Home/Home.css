@@ -80,7 +80,6 @@ li img {
     margin-left: 15px;
     gap: 10px;
     margin-block: 50px 30px;
-    
 }
 
 #Cartaz h2{
@@ -99,4 +98,21 @@ li img {
     width: 250px;
     height: 200px;
     margin: auto
+}
+
+@media (min-width: 910px){
+    ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px){
+
+    #Cartaz {
+        margin-left: 105px;
+    }
+    li img{
+        width: 265px;
+        height: 355px;
+    }
 }
