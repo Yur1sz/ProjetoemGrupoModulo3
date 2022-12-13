@@ -1,14 +1,18 @@
 .container-principal{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap:30px;
-   justify-items: center;
+    justify-items: center;
 }
-.simples, .premium, .plus, .vip{
+
+.simples, .premium, .plus, .vip, .react-basic, .caverna{
     background-color: white;
     width: 300px;
     height: 350px;
-    
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .simples-titulo{
     background-color: springgreen;
@@ -25,5 +29,15 @@
 .vip-titulo{
     background-color: black;
     color: white;
+    text-align: center;
+}
+
+.reactbasic-titulo{
+    background-color: violet;
+    text-align: center;
+}
+
+.caverna-titulo{
+    background-color: aquamarine;
     text-align: center;
 }

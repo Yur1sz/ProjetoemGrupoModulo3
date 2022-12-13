@@ -58,6 +58,33 @@ export default function Precos() {
                     <div></div>
                 </div>
             </div>
+            <div className="react-basic">
+                <div className="reactbasic-titulo">
+                    <h2>React Basic</h2>
+                </div>
+                <div>
+                    <div>
+                        <ul>
+                            <li>Inteiro:</li>
+                            <li>Meia:</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div className="caverna">
+                <div className="caverna-titulo">
+                    <h2>Caverna</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li>Inteiro:</li>
+                        <li>Meia:</li>
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
     )
 }
