@@ -60,7 +60,8 @@ li button {
     justify-self: end;
     border: 1px solid red;
     background-color:rgba(0, 0, 0, 0.387);
-    padding: 3px 9px;
+    padding: 2px 9px;
+    margin-top: 9px;
     border-radius: 16px;
     color: white;
     text-transform: uppercase;

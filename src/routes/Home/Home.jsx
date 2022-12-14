@@ -28,7 +28,10 @@ export default function Home() {
           <img src={LoadingGIF} id="LoadingGIF" alt="" />
         ) : (
           filmes.map((item) => (
-            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} id={item.id} />
+
+            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} id={item.id} sinopseFilme={item.sinopse} />
+            
+
           ))
         )}
         
