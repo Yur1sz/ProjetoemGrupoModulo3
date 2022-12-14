@@ -2,6 +2,7 @@ import fetch from '../../axios/config'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './NewPost.module.css'
+import LoadingGIF from '../../images/gif-loading.gif'
 
 export default function NewPost() {
 
@@ -13,17 +14,15 @@ export default function NewPost() {
     const [imagem, setImagem] = useState()
 
     
-
     const createPost = async(e) => {
         e.preventDefault();
-
         await fetch.post("/filmes",{
             titulo: titulo,
             imagem: imagem,
             roteiro: roteiro,
             ano: ano,
         })
-
+        alert(`Filme "${titulo}" adicionado com sucesso!`)
     }
 
     return(

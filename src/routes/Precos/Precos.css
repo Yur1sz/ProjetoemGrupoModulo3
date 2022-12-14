@@ -1,14 +1,15 @@
 .container-principal{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap:30px;
     justify-items: center;
+    padding-block: 80px
 }
 
 .simples, .premium, .plus, .vip, .react-basic, .caverna{
     background-color: white;
-    width: 300px;
-    height: 350px;
+    width: 200px;
+    height: 260px;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -40,4 +41,34 @@
 .caverna-titulo{
     background-color: aquamarine;
     text-align: center;
+}
+
+
+@media (min-width: 750px){
+    .container-principal{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .simples, .premium, .plus, .vip, .react-basic, .caverna{
+        width: 280px;
+        height: 310px;
+    }
+}
+
+@media (min-width:1144px){
+
+    .container-principal{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .simples, .premium, .plus, .vip, .react-basic, .caverna{
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 1480px){
+    .simples, .premium, .plus, .vip, .react-basic, .caverna{
+        width: 450px;
+        height: 300px;
+    }
 }

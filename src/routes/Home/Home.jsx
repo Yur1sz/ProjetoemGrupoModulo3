@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetch from "../../axios/config";
+import API from "../../axios/config";
 import ListItems from "../../components/ListItems";
 import Section from "../../components/Section";
 import "./Home.css"
@@ -11,20 +11,11 @@ export default function Home() {
 
   const [filmes, setFilmes] = useState([]);
 
-  const getFilmes = async () => {
-    try {
-      const response = await fetch.get("/filmes");
-      const data = response.data;
-
-      setFilmes(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    getFilmes();
+    API.get("/filmes")
+    .then(response=>setFilmes(response.data))
   }, []);
+
 
   return (
     <>
@@ -37,9 +28,10 @@ export default function Home() {
           <img src={LoadingGIF} id="LoadingGIF" alt="" />
         ) : (
           filmes.map((item) => (
-            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} />
+            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} id={item.id} />
           ))
         )}
+        
       </Section>
     </>
   );
