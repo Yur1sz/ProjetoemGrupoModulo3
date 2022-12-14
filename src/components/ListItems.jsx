@@ -1,87 +1,83 @@
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from 'react-modal';
-import "./ModalButton.css"; 
+import "./ModalButton.css";
 
 Modal.setAppElement("#root");
 
-export default function ListItems({img, nomeFilme, anoFilme, id , sinopseFilme}) {
+export default function ListItems({ img, nomeFilme, anoFilme, id, sinopseFilme }) {
 
-     // Parte do Modal //
-    const [modalAberto, SetModalAberto] = useState(false);
-   
-    function openModal() {
+  // Parte do Modal //
+  const [modalAberto, SetModalAberto] = useState(false);
+
+  function openModal() {
     SetModalAberto(true);
-   }
+  }
 
-   function closeModal () {
+  function closeModal() {
     SetModalAberto(false);
-   }
-   
-   //Parte para deletar o filme  //
+  }
 
-   function deletar(id) {
-      if (!confirm(`Realmente deseja deletar o filme "${nomeFilme}"?`)) {
-      } else {
-        fetch(`https://json-server-m3-8rj7.onrender.com/filmes/${id}`, {
-          method: "DELETE",
-        }).then((result) => {
-          result.json().then((resp) => {
-            console.warn(resp);
-          });
+  //Parte para deletar o filme  //
+
+  function deletar(id) {
+    if (!confirm(`Realmente deseja deletar o filme "${nomeFilme}"?`)) {
+    } else {
+      fetch(`https://json-server-m3-8rj7.onrender.com/filmes/${id}`, {
+        method: "DELETE",
+      }).then((result) => {
+        result.json().then((resp) => {
+          console.warn(resp);
         });
-        alert(
-          `Filme "${nomeFilme}" deletado com sucesso! Recarregue a página.`
-        );
-      }
+      });
+      alert(
+        `Filme "${nomeFilme}" deletado com sucesso! Recarregue a página.`
+      );
     }
-        
-    return(
-        <>
-            <li id="liHome">
-                <img src={img} alt="" />
-                <p>{nomeFilme} ({anoFilme})</p>
-               
-                  
-                <div className='container-modal'>
-                  
-               <button onClick={openModal}>Mais informações </button> 
-               <Modal 
-                 isOpen={modalAberto}
-                 onRequestClose={closeModal}
-                 contentLabel="Example Modal"
-                 overlayClassName='modal-overlay'
-                 className='modal-content'
-                 >  
-                 <h2>Mais informações sobre o filme {nomeFilme}</h2>
-                 <hr></hr>
+  }
 
-                 <div className='img-filme'>
-
-                  <img src={img} alt="" />
-
-                 </div>
-                  
-                 <p>
-                    {sinopseFilme}
-                 </p>
-
-                 <hr></hr>
-                 <p>Ano de lançamento: {anoFilme} </p>
-                 
+  return (
+    <>
+      <li id="liHome">
+        <img src={img} alt="" />
+        <p>{nomeFilme} ({anoFilme})</p>
 
 
-                 <button  className="button-close" onClick={closeModal}>Fechar </button>
+        <div className='container-modal'>
 
-               </Modal>
+          <button onClick={openModal}>Mais informações </button>
+          <Modal
+            isOpen={modalAberto}
+            onRequestClose={closeModal}
+            contentLabel="Example Modal"
+            overlayClassName='modal-overlay'
+            className='modal-content'
+          >
+            <h2 className="titulo-modal">Mais informações sobre o filme {nomeFilme}</h2>
+            <hr></hr>
 
+            <div className='infos-modal'>
 
-
-
+              <img src={img} alt="" />
+              <p>{sinopseFilme}</p>
             </div>
-            
-            <button onClick={()=>deletar(id)}>Excluir</button>
+            <p>Ano de lançamento: {anoFilme} </p>
+            <hr></hr>
 
-            </li>
-        </>
-    )
+
+
+
+            <button className="button-close" onClick={closeModal}>Fechar </button>
+
+          </Modal>
+
+
+
+
+        </div>
+
+        <button onClick={() => deletar(id)}>Excluir</button>
+
+      </li>
+    </>
+  )
 }

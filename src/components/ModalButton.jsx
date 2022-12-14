@@ -1,4 +1,4 @@
-import { useState } from 'react';
+  import { useState } from 'react';
 import Modal from 'react-modal';
 import "./ModalButton.css"; 
 
@@ -26,10 +26,10 @@ import "./ModalButton.css";
                  overlayClassName='modal-overlay'
                  className='modal-content'
                  >  
-                 <h2>Mais informações sobre o filme</h2>
+                 <h2>Mais informações sobre o {nomeFilme}</h2>
                  <hr></hr>
                  <p>
-                     Akira lorem 
+                     {sinopseFilme}
                  </p>
 
 
