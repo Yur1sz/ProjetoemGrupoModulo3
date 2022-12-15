@@ -122,7 +122,8 @@ export default function ListItems({
           >
             <h2>Editar o filme {nomeFilme}</h2>
             <hr/>
-            <form>
+            <div className="containereditar">
+            <form className="formularioeditar">
               <div>
                 <label htmlFor="titulo">Título do filme:</label>
                 <input type="text" value={titulo} onChange={(e)=>setTitulo(e.target.value)}/>
@@ -169,8 +170,9 @@ export default function ListItems({
               </div>
               
             </form>
+            </div>
             <hr></hr>
-            <button onClick={updateFilme} value="Editar filme" >Editar filme</button>
+            <button className="btneditar" onClick={updateFilme} value="Editar filme" >Editar filme</button>
             <button className="button-close" onClick={closeModalE}>
               Fechar{" "}
             </button>
