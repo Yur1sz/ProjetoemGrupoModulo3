@@ -5,6 +5,9 @@
 }
 .titulo-modal{
     font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
 
 .modal-overlay {
@@ -63,7 +66,9 @@
     height: 240px;
     border: 1px solid white;
     border-radius: 10px;
+    
 }
+
 .infos-modal p{
     font-size: .7rem;
 }

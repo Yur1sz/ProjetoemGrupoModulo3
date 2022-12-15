@@ -4,7 +4,7 @@ import "./ModalButton.css";
 
 Modal.setAppElement("#root");
 
-export default function ListItems({ img, nomeFilme, anoFilme, id, sinopseFilme }) {
+export default function ListItems({ img, nomeFilme, anoFilme, id, sinopseFilme , roteiroFilme }) {
 
   // Parte do Modal //
   const [modalAberto, SetModalAberto] = useState(false);
@@ -60,7 +60,8 @@ export default function ListItems({ img, nomeFilme, anoFilme, id, sinopseFilme }
               <img src={img} alt="" />
               <p>{sinopseFilme}</p>
             </div>
-            <p>Ano de lançamento: {anoFilme} </p>
+            <p className='info-extra'>Ano de lançamento: {anoFilme} </p>
+            <p className='info-extra'>Roteiro: {roteiroFilme} </p>
             <hr></hr>
 
 

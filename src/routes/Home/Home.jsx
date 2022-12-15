@@ -29,7 +29,7 @@ export default function Home() {
         ) : (
           filmes.map((item) => (
 
-            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} id={item.id} sinopseFilme={item.sinopse} />
+            <ListItems nomeFilme={item.titulo} anoFilme={item.ano} img={item.imagem} id={item.id} roteiroFilme={item.roteiro} sinopseFilme={item.sinopse} />
             
 
           ))

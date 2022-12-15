@@ -10,38 +10,45 @@
     background-color: white;
     width: 200px;
     height: 260px;
-    text-decoration: none;
     color: black;
     font-weight: bold;
-    text-transform: uppercase;
+    
+    
 }
 .simples-titulo{
     background-color: springgreen;
     text-align: center;
+    text-transform: uppercase;
 }
 .premium-titulo{
     background-color: pink;
     text-align: center;
+    text-transform: uppercase;
 }
 .plus-titulo{
     background-color: #61dbfb;
     text-align: center;
+    text-transform: uppercase;
 }
 .vip-titulo{
     background-color: black;
     color: white;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .reactbasic-titulo{
     background-color: violet;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .caverna-titulo{
     background-color: aquamarine;
     text-align: center;
+    text-transform: uppercase;
 }
+
 
 
 @media (min-width: 750px){
