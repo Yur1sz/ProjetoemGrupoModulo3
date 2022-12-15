@@ -52,7 +52,7 @@ export default function ListItems({ img, nomeFilme, anoFilme, id, sinopseFilme }
             overlayClassName='modal-overlay'
             className='modal-content'
           >
-            <h2 className="titulo-modal">Mais informações sobre o filme {nomeFilme}</h2>
+            <h2 className="titulo-modal"> {nomeFilme}</h2>
             <hr></hr>
 
             <div className='infos-modal'>
