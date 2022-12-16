@@ -92,7 +92,8 @@
     }
     .infos-modal img{
         width: 70%;
-        height: 340px;
+        max-width: 320px;
+        height: 350px;
     }
 }
 

@@ -1,16 +1,16 @@
-.lista-precos{
+.lista-cinemas{
     display: flex;
     justify-content: center;
     
 
 }
-.lista-precos li{
+.lista-cinemas li{
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 
 }
-.lista-precos li div{
+.lista-cinemas li div{
     background-color: wheat;
     padding-top: 20px;
     border-radius: 10px;
@@ -18,7 +18,7 @@
     width: 280px;
     height: 350px
 }
-.lista-precos p{
+.lista-cinemas p{
     color: black;
     font-size: 1.5rem;
 }

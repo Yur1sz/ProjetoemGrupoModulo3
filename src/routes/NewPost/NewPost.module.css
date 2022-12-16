@@ -42,3 +42,11 @@ form{
     border-radius: 20px;
     border: 1px solid var(--vermelhoClaro)
 }
+
+@media (min-width: 992px){
+    .newPost{
+        width: 500px;
+        margin-inline: auto;
+        border-radius: 16px;
+    }
+}
