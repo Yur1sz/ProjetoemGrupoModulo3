@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import API from '../../axios/config'
+import EmCartazIMG from '../../images/cinema.png'
 import "./Cinemas.css"
 export default function Cinemas() {
 
@@ -12,7 +13,9 @@ export default function Cinemas() {
 
   return (
     <>
-      <h2>Conheça nossos cinemas</h2>
+      <br></br><div id="Cinemas">
+        <h2> <img src={EmCartazIMG}/> nossos cinemas</h2><br></br>
+      </div>
       <ul className='lista-cinemas'>
         <li>
           {cinema.map(function locais(item) {
@@ -25,6 +28,7 @@ export default function Cinemas() {
         </li>
         
       </ul>
+      
     </>
   );
 }
